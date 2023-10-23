@@ -1,38 +1,283 @@
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 200%;
+  max-width: 850px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f0f1fcb9;
+  border-radius: 10px;
+}
 .App {
+text-align: center;
+width: 100%;
+max-width: 500px;
+margin: 10px auto 0 auto;
+padding: 20%;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: white;
+}
+/* Header styles */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
 }
+.App label {
+  width: 93%;
+  display: block;
+  margin: 10px 0;
+  text-align: left;
+  font-size: 15px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+.label {
+  font-size: 10px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App input {
+  
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #f0f1fcb9;
+  background-color: #f0f1fcb9;
+  border-radius: 10px;
+  margin: 5px 0 10px -35px;
+}
+.country-flag {
+  display: inline-block;
+  width: 24px; 
+  height: 24px;
+  border-radius: 50%; 
+  background: #fff; 
+  text-align: center;
+  line-height: 24px; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+
+
+#fir-sel {
+  width: 54%;
+  font-size: small;
+
+}
+.selected-checkbox {
+  background-color: #f0f1fcb9;
+  border-color: blue; }
+
+.investment-type-options div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  
+  padding: 0px;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+  width: 49%;
+  margin: -10px;
+}
+.investment-type-options :hover {
+  border-color: #3f51b5; 
+}
+
+
+.investment-type-options {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.ud-text {
+  font-size: x-small;
+  text-align: left;
+  margin-right: 50px;
+  margin-top: -10px;
+  
+}
+#output {
+  width: 79%;
+  height: 27px;
+}
+.net-capital-gains {
+  font-size: 18px; 
+  color: green;    
+}
+.last-col {
+  
+    
+    font-size: 10px;
+    text-align: center;
+    box-sizing: inherit;
+    width: 200px;
+    height: 100px;
+    padding: 7px;
+    border: 1px solid #f0f1fcb9;
+    background-color: #f0f1fcb9;
+    border-radius: 10px;
+    margin: 5px 0 10px -40px;
+}
+.rectangle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  height: 10px;
+  
+}
+.selected-checkbox::before {
+  content: '\2713'; 
+  font-size: 20px;
+  color: blue; 
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+.rectangle input {
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.tax-rate {
+  background-color: transparent; 
+  padding: 8px; 
+  border: 1px solid white; 
+  border-radius: 5px; 
+  text-align: left; 
+  font-size: x-small;
+  margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.App select {
+  
+
+  padding: 8px;
+  border: 1px solid #f0f1fcb9;
+  background-color: #f0f1fcb9;
+  border-radius: 10px;
+  
+
+}
+.fir-opt {
+  margin: 10px 30px 10px 0;
+}
+.inc-opt {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #f0f1fcb9;
+  background-color: #f0f1fcb9;
+  border-radius: 10px;
+  margin: 5px 0 10px -35px;
+}
+.label-option-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.label-option-container p {
+  margin: 0; 
+  font-weight: bold;
+  font-size: 18px;
+}
+.together {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.togetherr {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.togetherr p {
+  margin-left: 20px; 
+}
+.year-country-container {
+  display: flex;
+  align-items: center;
+}
+.App div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.year-country-container label, .year-country-container select {
+  margin-right: 10px; 
+}
+
+.purchase-price-container {
+  display: flex;
+flex-direction: row;
+  align-items: flex-start;
+}
+.purchase-price-container label,
+.purchase-price-container input {
+  width: 100%;
+  margin: 5px 0;
+}
+.purchase-price-container label {
+  width: 50%; 
+  margin-bottom: 5px; 
+  text-align: right;
+  padding-right: 10px;
+}
+
+.purchase-price-container input {
+  width: 50%; 
+  margin-left: 10px 0;
+  margin-bottom: 5px;
+}
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  max-width: 500px;
+}
+
+
+.faq-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f0f1fcb9;
+  border-radius: 10px;
+}
+
+
+.faq-item h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+
+.faq-item p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.question {
+  font-weight: bold; 
+}
+
+.answer {
+  margin-top: 10px; 
 }
