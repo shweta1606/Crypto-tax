@@ -50,7 +50,7 @@ answer:"Yes, according to the ATO, when you trade one cryptocurrency for another
   const [taxRateDescription, setTaxRateDescription] = useState('');
   useEffect(() => {
     calculateTax();
-  }, [purchasePrice, salePrice, expenses, investmentType, annualIncome]);
+  }, [purchasePrice, salePrice, expenses, investmentType, annualIncome, calculateTax]);
 
   const handleCheckboxChange = (value) => {
     setSelectedCheckbox(value);
@@ -75,7 +75,7 @@ answer:"Yes, according to the ATO, when you trade one cryptocurrency for another
 
     //  Tax to be Paid based on the selected Annual Income Range
     const [lowerRange, upperRange] = annualIncome.split('-').map(parseFloat);
-    const excessIncome = annualIncome === '180001' ? upperRange - lowerRange : annualIncome - lowerRange;
+    //const excessIncome = annualIncome === '180001' ? upperRange - lowerRange : annualIncome - lowerRange;
 
     if (annualIncome === '0-18200') {
       setTaxRate(0);
